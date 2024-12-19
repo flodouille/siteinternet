@@ -8,6 +8,7 @@
     }
 /* header:haut de page, footer:bas de page  */
     header {
+        z-index: 2;
         position: fixed;
         top: 0vh;
         left: 0vh;
@@ -31,13 +32,14 @@
         margin-right: 13vw;
         top: 22vh;
         display: flex;
+        gap: 20vh;
         justify-content: center;
         align-items: center;
         list-style-type: none;
     }
     header li {
-        padding-inline: 5vw;
-        margin-inline: 2vw;
+        white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+        padding-inline: 3vw;
         text-align: center;
         font-size: 1.5rem;
         border-radius: 20px;
@@ -52,39 +54,91 @@
         box-shadow: inset 6px 6px 15px #969696,
                     inset -6px -6px 15px #ffffff;
     }
-    #comment {
-        padding-top: 5vh;
-        height: 100vh;
-        background-color: #3a4e3d;
-        color: #f6e7d8;
+    p{
+        font-size: 1.2rem;
     }
     h1 {
         text-align: center;
         font-family: "Alkatra", system-ui;
-        font-size: 50px;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
     h2 {
-        background-color: rgb(251, 173, 19);
+        margin-left: 30vh;
+        font-size: 2rem;
     }
-    #blocs{
+    h3 {
+        font-size: 1.5rem;
+        margin-block: 0.8rem;
+    }
+    .partie1 {
+        height: 60vh;
+        background-color: #3a4e3d;
+        color: #f6e7d8;
+    }
+    .etape {
         display: flex;
-        justify-content: center;
         align-items: center;
-        min-height: 400px;
+        justify-content: center;
     }
-    #blocs div {
+    .etape span {
+        width: 1.2vw;
+        height: 8vh;
+        margin: 2rem;
+        background-color: rgb(251, 173, 19);
+        border-radius: 0.3rem;
         color: white;
-        border-radius: 44px;
-        height: 370px;
-        width: 335px;
-        background: rgb(0, 57, 77);
-        margin: 20px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 48px;
+        min-width: 8vw;
+    }
+    .partie1 img {
+        position: absolute;
+        z-index: 1;
+        top: 50vh;
+        left: 30vh;
+        height: 50vh;
+        z-index: 0;
+    }
+    .partie2 {
+        height: auto;
+        background-color: #f6e7d8;
+        color: #3a4e3d;
+    }
+    .partie2 img {
+        height: 15vh;
+    }
+    .partie2 div {
+        gap: 3rem;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .competences div {
+        display: inline;
+        color: white;
+        border-radius: 30px;
+        height: 30vh;
+        width: 15vw;
+        background: #3a4e3d;
+        margin: 2vh;
         text-align: center;
         box-shadow:  6px 6px 15px #969696,
         -6px -6px 15px #ffffff;
     }
+    .partie3 {
+        height: auto;
+        background-color: #3a4e3d;
+        color: #f6e7d8;
+    }
     footer {
-        background-color: rgb(0, 57, 77);
+        background-color: #3a4e3d;
         color: white;
         text-align: center;
         padding: 1.2em 0em;
