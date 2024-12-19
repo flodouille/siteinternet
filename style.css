@@ -4,50 +4,64 @@
         list-style: none;
     }
     body {
-        padding-top: 150px;
-        background-color: #dde1e7;
+        padding-top: 28.5vh;
     }
 /* header:haut de page, footer:bas de page  */
     header {
-        left: 0px;
-        right: 0px;
-        top: 0px;
         position: fixed;
+        top: 0vh;
+        left: 0vh;
+        bottom: 10vh;
+        width: 100vw;
+        height: 28.5vh;
+        color: white;
         background-color: white;
-        font-family: sans-serif;
-        text-align: center;
         font-family: "Alkatra", system-ui;
-        font-style:normal;
     }
     header img {
-        margin: 20px 60px 20px 20px;
-        height: 110px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 15vh;
+    }
+    header ul {
+        position: absolute;
+        margin-left: 13vw;
+        margin-right: 13vw;
+        top: 22vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
     }
     header li {
-        display: inline;
-        padding: 1.3em;
-        border-radius: 44px;
-        background: rgb(0, 57, 77);
+        padding-inline: 5vw;
+        margin-inline: 2vw;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        background: #3a4e3d;
         box-shadow:  6px 6px 15px #969696,
                      -6px -6px 15px #ffffff;
     }
     header li:hover {
         cursor: pointer;
-        border-radius: 44px;
-        background: rgb(0, 89, 121);
+        border-radius: 20px;
+        background: #4f6d53;
         box-shadow: inset 6px 6px 15px #969696,
                     inset -6px -6px 15px #ffffff;
     }
-    section.top-page {
-        height: vh;
-        background-color: rgb(0, 57, 77);
-        color: white;
+    #comment {
+        padding-top: 5vh;
+        height: 100vh;
+        background-color: #3a4e3d;
+        color: #f6e7d8;
     }
     h1 {
+        text-align: center;
         font-family: "Alkatra", system-ui;
-        font-weight: 60;
-        font-size: 80px;
-        padding: 50px 50px;
+        font-size: 50px;
     }
     h2 {
         background-color: rgb(251, 173, 19);
