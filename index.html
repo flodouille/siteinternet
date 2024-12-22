@@ -6,34 +6,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body>
-
-    <header>
-        <img src="SVG/logo.svg" alt="Logo du site">
+    <nav class="barnav">
+        <div class="header">
+            <div class="logo"><img src="SVG/logo.svg" alt="Logo du site"></div>
+            <div class="menu"><img src="/SVG/menu.svg" alt="menu"></div>
+        </div>
+        <div class="contient-slogan"><a href="#" class="slogan">La réparation en point relais</a></div>
+        <div class="nav-liens">
             <ul>
-                <li>LES BOUTIQUES PARTENAIRES</li>
-                <li>A PROPOS</li>
-                <li>CONTACT</li>
+                <li id="bouton1" onclick="scrollToThis(this)"><a href="#boutique">Trouver un relais</a></li>
+                <li id="bouton2" onclick="scrollToThis(this)"><a href="#boutique">Foire aux questions</a></li>
+                <li id="bouton3" onclick="scrollToThis(this)"><a href="#boutique">Me contacter</a></li>
             </ul>
-    </header>
+        </div>
+    </nav>
+
     <div class="partie1">
-        <h1>Le relais réparation, commment ça marche ?</h1>
+        <h1>Commment ça marche ?</h1>
         <img src="SVG/fleche.svg" alt="flèche">
         <li class="etape">
             <span>1</span>
                 <div class="etape-texte">
-                <h3>Déposer</h3>
+                <h3>Dépôt</h3>
                 <p>
-                Je confie mon objet à un relais réparation et laisse mes coordonnées.
+                Je confie mon objet et mes coordonnées à une boutique partenaire.
                 </p> 
                 </div>
             </li>
              <li class="etape">
                 <span>2</span>
                 <div class="etape-texte">
-                    <h3>Valider</h3>
+                    <h3>Diagnotic</h3>
                     <p>
                     Sous 7 jours, je reçois un diagnostic chiffré par SMS.
                     </p> 
@@ -42,9 +49,9 @@
             <li class="etape">
                 <span>3</span>
                 <div class="etape-texte">
-                    <h3>Récupérer</h3>
+                    <h3>Retrait</h3>
                     <p>
-                    Je retourne au relais réparation lors d'une permanence ou je demande une livraison.
+                    Je retourne au relais lors d'une permanence ou je demande une livraison à domicile.
                     </p> 
                 </div>
             </li>
@@ -52,7 +59,7 @@
 
     <div class="partie2">
         <h1>Peut-on tout faire réparer par Florent Bidouille ?</h1>
-        <section><h2>Tout objet ou appareil<h2></section>
+        <h2>Tout objet ou appareil<h2>
         <div>
             <img src="SVG/poids.svg" alt="icon +20kg interdit">
             <p>Ne pesant pas plus de 20kg</p>
@@ -62,17 +69,18 @@
             <p>Ne mesurant pas plus d'un mètre</p>
         </div>
         <div class="competences">
-        <div>Electronique</div>
-        <div>Soudure plastique</div>
-        <div>Soudure acier</div>  
-        <div>Gravure laser</div>  
+            <div>Electronique</div>
+            <div>Soudure plastique</div>
+            <div>Soudure acier</div>  
+            <div>Gravure laser</div>
+        </div>
     </div>
 
     <div class="partie3">
         <h1>Les boutiques partenaires</h1>
             <li class="partenaires">
             <span>Logo</span>
-                <div class="boutique">
+                <div id="boutique">
                 <h3>Nom</h3>
                 <p>
                     Description
@@ -96,7 +104,6 @@
                         Description
                     </p> 
                 </div>
-    </div>
     
     <div class="partie4">
         <h1>Réparer pour moins jeter</h1>
@@ -112,9 +119,17 @@
         Tèl : 06 XX XX XX XX
         Courriel : contactAflorentbidouille.fr
     </div>
+</div>
     <footer>
     Bidouillé par <strong>Florent BESSON</strong> - 45 Chemin de la grande grange 26250 LIVRON-SUR-DROME - Hébergé via <a href="https://github.com/"><strong>GitHub</strong>
     </footer>
 </body>
+<script>
+    const menuHamburger = document.querySelector(".menu")
+    const navLinks = document.querySelector(".nav-liens")
 
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('menu-mobile')
+    })
+</script>
 </html>
