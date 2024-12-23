@@ -84,21 +84,23 @@ body {
     border-radius: 10px;
 }
 p{
-        font-size: 1.2rem;
+    font-size: 1rem;
 }
 h1 {
-        text-align: center;
-        font-family: "Alkatra", system-ui;
-        font-size: 2.5rem;
-        padding: 1rem;
+    text-align: center;
+    font-family: "Alkatra", system-ui;
+    font-size: 2.5rem;
+    padding: 1.5rem;
 }
 h2 {
-        margin-left: 30vh;
-        font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: white;
 }
 h3 {
-        font-size: 1.5rem;
-        margin-block: 0.8rem;
+    font-size: 1.5rem;
+    margin-block: 0.8rem;
 }
 .partie1 {
     padding-top: 50px;
@@ -107,70 +109,107 @@ h3 {
     color: #f6e7d8;
 }
 .partie1 .etape {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .partie1 .etape span {
-        width: 1.2vw;
-        height: 8vh;
-        margin: 2rem;
-        background-color: rgb(251, 173, 19);
-        border-radius: 0.3rem;
-        color: white;
-        font-size: 1.8rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 48px;
-        min-width: 8vw;
+    width: 1.2vw;
+    height: 8vh;
+    margin: 2rem;
+    background-color: rgb(251, 173, 19);
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 48px;
+    min-width: 8vw;
 }
 .partie1 img {
-        position: absolute;
-        top: 55vh;
-        left: 10vw;
-        height: 40vh;
-        transform: rotate(10deg);
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+    height: 40vh;
+    transform: rotate(10deg);
 }
 .partie2 {
-        height: auto;
-        background-color: #f6e7d8;
-        color: #3a4e3d;
+    width: 100vw;
+    height: auto;
+    margin-bottom: -5px;
+    background-color: #f6e7d8;
+    color: #3a4e3d;
 }
 .partie2 img {
-        height: 15vh;
+    margin: 10px;
+    height: 150px;
 }
 .partie2 div {
-        gap: 3rem;
-        padding: 0.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.competences div {
-        display: inline;
-        color: white;
-        border-radius: 30px;
-        height: 30vh;
-        width: 15vw;
-        background: #3a4e3d;
-        margin: 2vh;
-        text-align: center;
-        box-shadow:  6px 6px 15px #969696,
-        -6px -6px 15px #ffffff;
+.icon {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+.competences {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.competences img {
+    width: 25vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 .partie3 {
+        width: 100vw;
         height: auto;
         background-color: #3a4e3d;
         color: #f6e7d8;
+}
+.logo-boutique {
+    margin: 30px;
+    width: 100px;
+}
+.partie3 li {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.partie3 .carte img {
+    width: 50px;
+    margin: 50px;
 }
 footer {
         background-color: #3a4e3d;
         color: white;
         text-align: center;
         padding: 1.2em 0em;
+}
+.partie4 {
+    background-color: #f6e7d8;
+    color: #3a4e3d;
+}
+.partie5 {
+    height: 80vh;
+    background-color: #3a4e3d;
+    color: #f6e7d8;
+}
+.partie6 {
+    background-color: #f6e7d8;
+    color: #3a4e3d;
+}
+.partie6 p {
+    justify-content: center;
+    align-items: center;
 }
 footer a {
         color: #efefef;
@@ -272,5 +311,17 @@ footer a {
     }
     .partie1 .etape {
         padding-right: 5vw;
+    }
+    .competences img {
+        width: 50vw;
+    }
+    .logo-boutique {
+        margin: 15px;
+        width: 60px;
+    }
+    .partie3 .carte img {
+        width: 50px;
+        margin-left: 5px;
+        margin-right: 20px;
     }
 }
