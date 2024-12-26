@@ -2,9 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 </head>
@@ -18,9 +15,9 @@
         <div class="contient-slogan"><a href="#" class="slogan">La réparation en point relais</a></div>
         <div class="nav-liens">
             <ul>
-                <li id="bouton1" onclick="scrollToThis(this)"><a href="#boutique">Trouver un relais</a></li>
-                <li id="bouton2" onclick="scrollToThis(this)"><a href="#boutique">Foire aux questions</a></li>
-                <li id="bouton3" onclick="scrollToThis(this)"><a href="#boutique">Me contacter</a></li>
+                <li id="bouton1" onclick="scrollToThis(this)"><a href="#relais">Trouver un relais</a></li>
+                <li id="bouton2" onclick="scrollToThis(this)"><a href="#questions">Foire aux questions</a></li>
+                <li id="bouton3" onclick="scrollToThis(this)"><a href="#contact">Me contacter</a></li>
             </ul>
         </div>
     </nav>
@@ -70,7 +67,7 @@
             <div><img src="PHOTOS/demontage.jpg" alt="démontage"></div>
             <div><img src="PHOTOS/soudureplastique.jpg" alt="soudure plastique"></div>
             <div><img src="PHOTOS/souduremma.jpg" alt="soudure métal"></div>  
-            <div><img src="PHOTOS/reparation.jpg" alt="réparation"></div>
+            <div id="relais"><img src="PHOTOS/reparation.jpg" alt="réparation"></div>
         </div>
     </div>
 
@@ -119,7 +116,7 @@
         <h1>Réparer pour moins jeter</h1>
         <h2>Le constat</h2>
         <p>Trop d'objets et d'appareil sont jeté sans même penser à la réparation</p>
-        <h2>La réponse</h2>
+        <h2 id="questions">La réponse</h2>
         <p>Proposer une solution de réparation pour les appareils à faible valeur marchande</p>
         <p>un diagnostic gratuit et un prix en rapport du prix du neuf</p>
     </div>
@@ -129,7 +126,7 @@
             Foire aux questions
         </h1>
     </div>
-    <div class="partie6">
+    <div class="partie6" id="contact">
         <h1>
             Me contacter :
         </h1>
