@@ -223,6 +223,14 @@
 
     menuHamburger.addEventListener('click',()=>{
     navLinks.classList.toggle('menu-mobile')
-    })
+    });
+    
+  // Clic en dehors pour retirer "menu-mobile"
+    document.addEventListener('click', (event) => {
+    // Vérifie si le clic est en dehors du menu et du bouton hamburger
+    if (!navLinks.contains(event.target) && !menuHamburger.contains(event.target)) {
+      navLinks.classList.remove('menu-mobile');
+    }
+    });
 </script>
 </html>
