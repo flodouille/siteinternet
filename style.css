@@ -94,10 +94,13 @@ h2 {
     border-radius: 20px;
     text-align: center;
     justify-content: center;
+    align-items: center;
     font-family: "Berliner Wand";
     font-size: 3rem;
+    font-weight: 400;
     letter-spacing: 0.05rem;
     background: white;
+    color: black;
 }
 h3 {
     font-family: "Berliner Wand";
@@ -222,7 +225,6 @@ footer {
     width: 30vw;
     margin: auto;
     margin-top: 10px;
-    color: black;
 }
 .partie4 img {
     max-width: 200px;
