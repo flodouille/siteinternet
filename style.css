@@ -30,13 +30,9 @@ body {
     height: 180px;
     font-family: "Berliner Wand";
 }
-.header div{
-    width: 100px;
-    padding: 20px;
-}
 .logo img{
-    margin-left: 10px;
-    margin-top: 35px;
+    margin: auto;
+    margin-left: 30px;
     width: 250px;
 }
 .contient-slogan {
@@ -49,13 +45,15 @@ body {
 .slogan {
     white-space: nowrap;
     font-size: 3.5rem;
-    letter-spacing: 0.15rem;
+    max-width: 45vw;
+    letter-spacing: 0.05rem;
     color: #3a4e3d;
     margin-left: 10vw;
-    margin-right: 10px;
+    margin-right: 2.5vw;
 }
 .barnav .nav-liens ul {
     display: flex;
+    margin-left: 100px;
 }
 .barnav .nav-liens ul li {
     font-size: 20px;
@@ -92,6 +90,8 @@ h1 {
     padding: 1.5rem;
 }
 h2 {
+    width: 100%;
+    border-radius: 20px;
     text-align: center;
     justify-content: center;
     font-family: "Berliner Wand";
@@ -107,12 +107,11 @@ h3 {
 }
 p{
     font-family: "Montserrat";
-    font-weight: 200;
     font-size: 1.2rem;
 }
 .partie1 {
     padding-top: 50px;
-    height: 60vh;
+    height: auto;
     background-color: #3a4e3d;
     color: #f6e7d8;
 }
@@ -167,6 +166,7 @@ p{
 .competences {
     display: flex;
     margin: 0;
+    margin-top: 20px;
     padding: 0;
 }
 .competences img {
@@ -197,25 +197,107 @@ p{
     margin: 50px;
 }
 footer {
-        background-color: #3a4e3d;
-        color: white;
-        text-align: center;
-        padding: 1.2em 0em;
+    background-color: #3a4e3d;
+    color: white;
+    text-align: center;
+    padding: 1.2em 0em;
 }
 .partie4 {
-    height: 80vh;
+    height: auto;
+    margin-bottom: 10px;
     background-color: #f6e7d8;
     color: #3a4e3d;
 }
+.partie4 .paragraphe {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+}
+.partie4 .titre{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    margin: auto;
+    margin-top: 10px;
+    color: black;
+}
+.partie4 img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+.partie4 p {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partie4 .texte_seul {
+    font-weight: bold;
+}
 .partie5 {
-    height: 80vh;
+    height: auto;
+    padding: 25px;
     background-color: #3a4e3d;
     color: #f6e7d8;
 }
+.partie5 .accordeon {
+    border-radius: 0.5rem;
+}
+.partie5 details {
+    margin-bottom: 10px;
+    border: 0.05rem solid #f6e7d8;
+    border-radius: 0.5rem;
+    padding: 25px;
+}
+.partie5 details[open] .fleche {
+    border: 2px solid #f6e7d8;
+    border-bottom: transparent;
+    border-right: transparent;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.sommaire {
+    display: flex;
+}
+.question {
+    margin-right: 50px;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Berliner Wand";
+    width: 95%;
+    height: 100%;
+    font-size: 2rem;
+}
+.fleche {
+    margin-top: 15px;
+    margin-left: 15px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    padding: 15px;
+    border: 2px solid #f6e7d8;
+    border-top: transparent;
+    border-left: transparent;
+}
+.partie5 p {
+    padding-top: 15px;
+    padding-left: 10px;
+}
 .partie6 {
-    height: 50vh;
+    height: auto;
+    margin-bottom: 40px;
     background-color: #f6e7d8;
     color: #3a4e3d;
+}
+.partie6 div {
+    background: white;
+    width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 10px;
 }
 .partie6 p {
     justify-content: center;
@@ -225,7 +307,7 @@ footer a {
         color: #efefef;
 }
 @media screen and (max-width: 1500px) and (min-width: 900px){
-    .barnav .slogan {
+    .barnav .contient-slogan {
             display: none;
     }
     .nav-liens {
@@ -241,33 +323,29 @@ footer a {
     }
     .barnav {
         width: 100vw;
-        height: 170px;
+        height: auto;
         display: block;
+        padding: 10px;
     }
     .header {
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 100vw;
-        margin: none;
-        margin-left: 3vw;
+        width: 95vw;
     }
     .logo img{
-        padding: 0;
         margin: 0;
-        width: 200px;
-    }
-    div .menu {
-        width: 100vw;
+        margin-right: 50px;
+        width: 150px;
     }
     .menu img{
         margin-left: auto;
-        margin-right: 10vw;
         display: flex;
         width: 40px;
     }
     .contient-slogan {
         width: 100vw;
-        height: 0.5vh;
+        height: 5vh;
     }
     .slogan {
         position: relative;
@@ -283,12 +361,12 @@ footer a {
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 15vh;
+        top: 12vh;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.212);
         backdrop-filter: blur(4px);
         width: 80vw;
-        height: 50vh;
+        height: 40vh;
         margin-left: 200vw;
         border-radius: 50px 0px 0px 50px;
         transition: all 0.5s ease-in;
@@ -297,6 +375,7 @@ footer a {
         margin-left: 20vw;
     }
     .barnav .nav-liens ul {
+        margin-left: 0;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -323,9 +402,10 @@ footer a {
     }
     p {
         padding-right: 10px;
+        font-size: 1rem;
     }
     .partie1 {
-        padding-top: 3vh;
+        padding-top: 0;
         height: auto;
     }
     .partie1 img {
@@ -354,5 +434,44 @@ footer a {
         width: 50px;
         margin-left: 5px;
         margin-right: 20px;
+    }
+    .partie4 .titre{
+        width: 60vw;
+        margin: auto;
+        margin-top: 10px;
+        color: black;
+    }
+    .partie4 .paragraphe {
+        width: 100vw;
+    }
+    .partie4 p {
+        padding: 0;
+    }
+    .partie5 details {
+        padding: 20px;
+    }
+    .question {
+        font-size: 1.7rem;
+        margin-right: 25px;
+        max-width: 55vw;
+    }
+    .contient-fleche {
+        margin: auto;
+        margin-right: 0;
+    }
+    .fleche {
+        margin: 0;
+    }
+    .partie5 details[open] .fleche {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .partie5 details[open] .contient-fleche {
+        margin-top: 55px;
+    }
+    .partie6 div {
+        width: 300px;
+        padding: 10px;
+        margin-top: 5px;
     }
 }

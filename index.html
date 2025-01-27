@@ -9,15 +9,15 @@
 <body>
     <nav class="barnav">
         <div class="header">
-            <div class="logo"><img src="SVG/logo.svg" alt="Logo du site"></div>
+            <div class="logo"><a href="#"></a><img src="SVG/logo.svg" alt="Logo du site"></div>
             <div class="menu"><img src="/SVG/menu.svg" alt="menu"></div>
         </div>
         <div class="contient-slogan"><a href="#" class="slogan">La réparation en point relais</a></div>
         <div class="nav-liens">
             <ul>
                 <li id="bouton1" onclick="scrollToThis(this)"><a href="#relais">Trouver un relais</a></li>
-                <li id="bouton2" onclick="scrollToThis(this)"><a href="#questions">Foire aux questions</a></li>
-                <li id="bouton3" onclick="scrollToThis(this)"><a href="#contact">Me contacter</a></li>
+                <li id="bouton2" onclick="scrollToThis(this)"><a href="#questions">Questions fréquentes</a></li>
+                <li id="bouton3" onclick="scrollToThis(this)"><a href="#contact">Contacts</a></li>
             </ul>
         </div>
     </nav>
@@ -57,11 +57,14 @@
     <div class="partie2">
         <h1>Peut-on tout faire réparer ?</h1>
         <div>
-            <h2>Oui, dans la limite de 20kg et un mètre de large</h2>
+            <h2>Oui, dans la limite de 20kg et un mètre de large*</h2>
         </div>
         <div class="icon">
             <img src="SVG/poids.svg" alt="icon +20kg interdit">
             <img src="SVG/largeur.svg" alt="icon largeur +1m interdit">
+        </div>
+        <div>
+            <p>*Hors articles réglementés</p>
         </div>
         <div class="competences">
             <div><img src="PHOTOS/demontage.jpg" alt="démontage"></div>
@@ -72,12 +75,12 @@
     </div>
 
     <div class="partie3">
-        <h1>Les boutiques relais</h1>
+        <h1>Les points relais</h1>
         <li class="partenaires">
             <span><img class=logo-boutique src="LOGOS/entreprise.jpg" alt="Logo entreprise"></span>
             <div>
                 <h3>
-                    Nom de la boutique
+                    Nom de l'établissement
                 </h3>
                 
                 <p>
@@ -90,7 +93,7 @@
             <span><img class=logo-boutique src="LOGOS/entreprise.jpg" alt="Logo entreprise"></span>
             <div>
                 <h3>
-                    Nom de la boutique
+                    Nom de l'établissement
                 </h3>
                 <p>
                     Description Description Description Description
@@ -102,7 +105,7 @@
             <span><img class=logo-boutique src="LOGOS/entreprise.jpg" alt="Logo entreprise"></span>
             <div>
                 <h3>
-                    Nom de la boutiques
+                    Nom de l'établissement
                 </h3>
                 <p>
                     Description Description Description Description
@@ -114,28 +117,104 @@
     
     <div class="partie4">
         <h1>Réparer pour moins jeter</h1>
-        <h2>Le constat</h2>
-        <p>Trop d'objets et d'appareil sont jeté sans même penser à la réparation</p>
-        <h2 id="questions">La réponse</h2>
-        <p>Proposer une solution de réparation pour les appareils à faible valeur marchande</p>
-        <p>un diagnostic gratuit et un prix en rapport du prix du neuf</p>
+        <div>
+            <div class="titre">
+                <h2>UN CONSTAT</h2>
+            </div>
+            <div class="paragraphe">
+            <p>Trop d'objets et d'appareil sont jeté sans même penser à la réparation...</p>
+            <img src="SVG/grille_pain.svg" alt="grille pain">
+            </div>
+            <p class="texte_seul">Souvent parce qu'une réparation est trop coûteuse ou qu'il n'y a pas de pièces détachées en vente.</p>
+        </div>
+        <div>
+            <div class="titre">
+                <h2 id="questions">UNE SOLUTION</h2>
+            </div>
+            <div class="paragraphe">
+                <p>Proposer une réparation en rapport du prix du neuf</p>
+            </div>
+            <p class="texte_seul">En limitant les coûts grâce au système de point relais et aux pièces d'occasion !</p>
+        </div>
     </div>
 
     <div class="partie5">
         <h1>
-            Foire aux questions
+            Questions fréquentes
         </h1>
+        <div class="accordeon">
+            <details>
+                <summary>
+                    <div class="sommaire">
+                        <div class="question">
+                            Après diagnostic mon objet n'est pas réparable, quelle est la suite ?
+                        </div>
+                        <div class="contient-fleche">
+                            <div class="fleche">
+                            </div>
+                        </div>
+                    </div>
+                </summary>
+                <p>Vous n'avez rien à payer, votre objet sera déposé en point relais pour vous être rendu.
+                Si vous ne souhaitez vous débarasser de votre objet, il peut-être laissé pour pièces détachées.</p>
+            </details>
+            <details>
+                <summary>
+                    <div class="sommaire">
+                        <div class="question">
+                            Combien ça coûte une réparation par Florent Bidouille ?
+                        </div>
+                        <div class="contient-fleche">
+                            <div class="fleche">
+                            </div>
+                        </div>
+                    </div>
+                </summary>
+                <p>Le montant total de la réparation ne pourra pas dépasser le prix de votre objet neuf, avec un minimum de 10€.</p>
+            </details>
+            <details>
+                <summary>
+                    <div class="sommaire">
+                        <div class="question">
+                            
+                        </div>
+                        <div class="contient-fleche">
+                            <div class="fleche">
+                            </div>
+                        </div>
+                    </div>
+                </summary>
+                <p></p>
+            </details>
+            <details>
+                <summary>
+                    <div class="sommaire">
+                        <div class="question">
+                            
+                        </div>
+                        <div class="contient-fleche">
+                            <div class="fleche">
+                            </div>
+                        </div>
+                    </div>
+                </summary>
+                <p></p>
+            </details>
+        </div>
     </div>
     <div class="partie6" id="contact">
         <h1>
-            Me contacter :
+            CONTACTS :
         </h1>
-        <p>Tèl : 06 XX XX XX XX</p>
-        <p>Courriel : contactAflorentbidouille.fr</p>
+        <div>
+            <img src="/SVG/contacts.svg" alt="Contacts">
+        </div>
     </div>
 </div>
     <footer>
-    Bidouillé par <strong>Florent BESSON</strong> - 45 Chemin de la grande grange 26250 LIVRON-SUR-DROME - Hébergé via <a href="https://github.com/"><strong>GitHub</strong></a>
+    Bidouillé par <strong>Florent BESSON</strong> <br>
+    <strong>SIRET</strong> : 93913900200017 - 45 Chemin de la grande grange 26250 LIVRON-SUR-DROME <br>
+    Hébergé via <a href="https://github.com/"><strong>GitHub</strong></a>
     </footer>
 </body>
 <script>
