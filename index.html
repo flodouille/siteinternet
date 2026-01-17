@@ -1,236 +1,133 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-</head>
-
-<body>
-    <nav class="barnav">
-        <div class="header">
-            <div class="logo"><a href="#"></a><img src="SVG/logo.svg" alt="Logo du site"></div>
-            <div class="menu"><img src="/SVG/menu.svg" alt="menu"></div>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | Assistant_Académie</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
-        <div class="contient-slogan"><a href="#" class="slogan">La réparation en point relais</a></div>
-        <div class="nav-liens">
-            <ul>
-                <li id="bouton1" onclick="scrollToThis(this)"><a href="#relais">Trouver un relais</a></li>
-                <li id="bouton2" onclick="scrollToThis(this)"><a href="#questions">Questions fréquentes</a></li>
-                <li id="bouton3" onclick="scrollToThis(this)"><a href="#contact">Contacts</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="partie1">
-        <h1>Commment ça marche ?</h1>
-        <img src="SVG/fleche.svg" alt="flèche">
-        <li class="etape">
-            <span>1</span>
-                <div class="etape-texte">
-                <h3>Dépôt</h3>
-                <p>
-                Je confie mon objet et mes coordonnées à une boutique partenaire.
-                </p> 
-                </div>
-            </li>
-             <li class="etape">
-                <span>2</span>
-                <div class="etape-texte">
-                    <h3>Diagnotic</h3>
-                    <p>
-                    Sous 7 jours, je reçois un diagnostic chiffré par SMS.
-                    </p> 
-                </div>
-            </li>
-            <li class="etape">
-                <span>3</span>
-                <div class="etape-texte">
-                    <h3>Retrait</h3>
-                    <p>
-                    Je retourne au relais lors d'une permanence ou je demande une livraison à domicile.
-                    </p> 
-                </div>
-            </li>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Assistant_Académie</div>
+      </div>
     </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
 
-    <div class="partie2">
-        <h1>Peut-on tout faire réparer ?</h1>
-        <div>
-            <h2>Oui, dans la limite de 20kg et un mètre de large*</h2>
-        </div>
-        <div class="icon">
-            <img src="SVG/poids.svg" alt="icon +20kg interdit">
-            <img src="SVG/largeur.svg" alt="icon largeur +1m interdit">
-        </div>
-        <div>
-            <p>*Hors articles réglementés</p>
-        </div>
-        <div class="competences">
-            <div><img src="PHOTOS/demontage.jpg" alt="démontage"></div>
-            <div><img src="PHOTOS/soudureplastique.jpg" alt="soudure plastique"></div>
-            <div><img src="PHOTOS/souduremma.jpg" alt="soudure métal"></div>  
-            <div id="relais"><img src="PHOTOS/reparation.jpg" alt="réparation"></div>
-        </div>
-    </div>
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
 
-    <div class="partie3">
-        <h1>Les points relais</h1>
-        <li class="partenaires">
-            <span><img class=logo-boutique src="LOGOS/entreprise.jpg" alt="Logo entreprise"></span>
-            <div>
-                <h3>
-                    Nom de l'établissement
-                </h3>
-                
-                <p>
-                    Description Description Description Description
-                </p>
-            </div>
-            <span><a class=carte href="https://www.google.fr/maps"><img src="SVG/carte.svg" alt="carte"></a></span>
-        </li>
-        <li class="partenaires">
-            <span><img class=logo-boutique src="LOGOS/entreprise.jpg" alt="Logo entreprise"></span>
-            <div>
-                <h3>
-                    Nom de l'établissement
-                </h3>
-                <p>
-                    Description Description Description Description
-                </p> 
-            </div>
-            <span><a class=carte href="https://www.google.fr/maps"><img src="SVG/carte.svg" alt="carte"></a></span>
-        </li>
-        <li class="partenaires">
-            <span><img class=logo-boutique src="LOGOS/entreprise.jpg" alt="Logo entreprise"></span>
-            <div>
-                <h3>
-                    Nom de l'établissement
-                </h3>
-                <p>
-                    Description Description Description Description
-                </p> 
-            </div>
-            <span><a class=carte href="https://www.google.fr/maps"><img src="SVG/carte.svg" alt="carte"></a></span>
-        </li>
-    </div>
-    
-    <div class="partie4">
-        <h1>Réparer pour moins jeter</h1>
-        <div>
-            <div class="titre">
-                <h2>UN CONSTAT</h2>
-            </div>
-            <div class="paragraphe">
-            <p>Trop d'objets et d'appareil sont jeté sans même penser à la réparation...</p>
-            <img src="SVG/grille_pain.svg" alt="grille pain">
-            </div>
-            <p class="texte_seul">Souvent parce qu'une réparation est trop coûteuse ou qu'il n'y a pas de pièces détachées en vente.</p>
-        </div>
-        <div>
-            <div class="titre">
-                <h2 id="questions">UNE SOLUTION</h2>
-            </div>
-            <div class="paragraphe">
-                <p>Proposer une réparation en rapport du prix du neuf</p>
-            </div>
-            <p class="texte_seul">En limitant les coûts grâce au système de point relais et aux pièces d'occasion !</p>
-        </div>
-    </div>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Farfassistant.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/Farfassistant.data.br",
+        frameworkUrl: buildUrl + "/Farfassistant.framework.js.br",
+        codeUrl: buildUrl + "/Farfassistant.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Assistant_Académie",
+        productVersion: "0.1.0",
+        showBanner: unityShowBanner,
+        // errorHandler: function(err, url, line) {
+        //    alert("error " + err + " occurred at line " + line);
+        //    // Return 'true' if you handled this error and don't want Unity
+        //    // to process it further, 'false' otherwise.
+        //    return true;
+        // },
+      };
 
-    <div class="partie5">
-        <h1>
-            Questions fréquentes
-        </h1>
-        <div class="accordeon">
-            <details>
-                <summary>
-                    <div class="sommaire">
-                        <div class="question">
-                            Après diagnostic mon objet n'est pas réparable, quelle est la suite ?
-                        </div>
-                        <div class="contient-fleche">
-                            <div class="fleche">
-                            </div>
-                        </div>
-                    </div>
-                </summary>
-                <p>Vous n'avez rien à payer, votre objet sera déposé en point relais pour vous être rendu.
-                Si vous ne souhaitez vous débarasser de votre objet, il peut-être laissé pour pièces détachées.</p>
-            </details>
-            <details>
-                <summary>
-                    <div class="sommaire">
-                        <div class="question">
-                            Combien ça coûte une réparation par Florent Bidouille ?
-                        </div>
-                        <div class="contient-fleche">
-                            <div class="fleche">
-                            </div>
-                        </div>
-                    </div>
-                </summary>
-                <p>Le montant total de la réparation ne pourra pas dépasser le prix de votre objet neuf, avec un minimum de 10€.</p>
-            </details>
-            <details>
-                <summary>
-                    <div class="sommaire">
-                        <div class="question">
-                            
-                        </div>
-                        <div class="contient-fleche">
-                            <div class="fleche">
-                            </div>
-                        </div>
-                    </div>
-                </summary>
-                <p></p>
-            </details>
-            <details>
-                <summary>
-                    <div class="sommaire">
-                        <div class="question">
-                            
-                        </div>
-                        <div class="contient-fleche">
-                            <div class="fleche">
-                            </div>
-                        </div>
-                    </div>
-                </summary>
-                <p></p>
-            </details>
-        </div>
-    </div>
-    <div class="partie6" id="contact">
-        <h1>
-            CONTACTS :
-        </h1>
-        <div>
-            <img src="/SVG/contacts.svg" alt="Contacts">
-        </div>
-    </div>
-</div>
-    <footer>
-    Bidouillé par <strong>Florent BESSON</strong> <br>
-    <strong>SIRET</strong> : 93913900200017 - 45 Chemin de la grande grange 26250 LIVRON-SUR-DROME <br>
-    Hébergé via <a href="https://github.com/"><strong>GitHub</strong></a>
-    </footer>
-</body>
-<script>
-    const menuHamburger = document.querySelector(".menu")
-    const navLinks = document.querySelector(".nav-liens")
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
 
-    menuHamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('menu-mobile')
-    });
-    
-  // Clic en dehors pour retirer "menu-mobile"
-    document.addEventListener('click', (event) => {
-    // Vérifie si le clic est en dehors du menu et du bouton hamburger
-    if (!navLinks.contains(event.target) && !menuHamburger.contains(event.target)) {
-      navLinks.classList.remove('menu-mobile');
-    }
-    });
-</script>
+      // If you would like all file writes inside Unity Application.persistentDataPath
+      // directory to automatically persist so that the contents are remembered when
+      // the user revisits the site the next time, uncomment the following line:
+      // config.autoSyncPersistentDataPath = true;
+      // This autosyncing is currently not the default behavior to avoid regressing
+      // existing user projects that might rely on the earlier manual
+      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
+      // expected to change.
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        document.querySelector("#unity-container").className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      document.querySelector("#unity-loading-bar").style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                document.querySelector("#unity-loading-bar").style.display = "none";
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+
+    </script>
+  </body>
 </html>
